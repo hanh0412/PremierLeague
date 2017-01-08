@@ -8,40 +8,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/mainscreen"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:theme="@style/menuitemcolor"
+                app:subtitle="@string/app_name"
+                app:subtitleTextColor="@color/colorWhite">
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+        <FrameLayout
+            android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+        </FrameLayout>
+    </LinearLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navMenu"
+        android:background="@color/colorWhite"
+        android:layout_width="330dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menuitem"
+        app:headerLayout="@layout/header_menu"
+        >
 
-            <android.support.design.widget.AppBarLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:theme="@style/menuitemcolor"
-                    app:subtitle="@string/app_name"
-                    app:subtitleTextColor="@color/colorWhite">
-                </android.support.v7.widget.Toolbar>
-
-            </android.support.design.widget.AppBarLayout>
-            <LinearLayout
-                android:id="@+id/content"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                </FrameLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </FrameLayout>
+    </android.support.design.widget.NavigationView>
 
 
 
