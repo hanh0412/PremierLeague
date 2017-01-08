@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PremierLeague</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_fixtures">Fixtures</string>
+    <string name="menu_stadium">Stadium</string>
+    <string name="menu_table">Table</string>
+    <string name="menu_player">Player</string>
+    <string name="menu_team">Team</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>

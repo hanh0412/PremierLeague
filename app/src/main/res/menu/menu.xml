@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/more_vert_white"
+        android:title=""
+        app:showAsAction="always"
+        >
+        <menu>
+            <item
+            android:id="@+id/Home"
+            android:title="@string/menu_home"
+            />
+            <item
+                android:id="@+id/Table"
+                android:title="@string/menu_table"
+                />
+            <item
+                android:id="@+id/Fixtures"
+                android:title="@string/menu_fixtures"
+                />
+            <item
+                android:id="@+id/Team"
+                android:title="@string/menu_team"/>
+            <item
+                android:id="@+id/Stadium"
+                android:title="@string/menu_stadium"
+                />
+            <item
+                android:id="@+id/Player"
+                android:title="@string/menu_player"
+                />
+        </menu>
+    </item>
+</menu>
