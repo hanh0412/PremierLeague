@@ -1,4 +1,4 @@
-package vn.phamngochanh.premierleague.View.Fragment;
+package vn.phamngochanh.premierleague.View.Fragment.Home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

@@ -1,13 +1,11 @@
-package vn.phamngochanh.premierleague.View.SplashScreen;
+package vn.phamngochanh.premierleague.View.Home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import vn.phamngochanh.premierleague.R;
-import vn.phamngochanh.premierleague.View.Home.HomeActivity;
 
 /**
  * Created by PhamNgocHanh on 1/8/17.

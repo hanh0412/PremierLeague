@@ -16,12 +16,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import vn.phamngochanh.premierleague.R;
-import vn.phamngochanh.premierleague.View.Fragment.FragmentFixtures;
-import vn.phamngochanh.premierleague.View.Fragment.FragmentHome;
-import vn.phamngochanh.premierleague.View.Fragment.FragmentPlayer;
-import vn.phamngochanh.premierleague.View.Fragment.FragmentStadium;
-import vn.phamngochanh.premierleague.View.Fragment.FragmentTable;
-import vn.phamngochanh.premierleague.View.Fragment.FragmentTeam;
+import vn.phamngochanh.premierleague.View.Fragment.Fixtures.FragmentFixtures;
+import vn.phamngochanh.premierleague.View.Fragment.Home.FragmentHome;
+import vn.phamngochanh.premierleague.View.Fragment.Player.FragmentPlayer;
+import vn.phamngochanh.premierleague.View.Fragment.Stadium.FragmentStadium;
+import vn.phamngochanh.premierleague.View.Fragment.Table.FragmentTable;
+import vn.phamngochanh.premierleague.View.Fragment.Team.FragmentTeam;
 
 /**
  * Created by PhamNgocHanh on 1/8/17.

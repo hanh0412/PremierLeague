@@ -1,4 +1,4 @@
-package vn.phamngochanh.premierleague.View.Fragment;
+package vn.phamngochanh.premierleague.View.Fragment.Team;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +13,7 @@ import vn.phamngochanh.premierleague.R;
  * Created by PhamNgocHanh on 1/8/17.
  */
 
-public class FragmentFixtures extends Fragment {
+public class FragmentTeam extends Fragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,7 +23,8 @@ public class FragmentFixtures extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fixtures_layout, container, false);
+        View view = inflater.inflate(R.layout.team_layout, container, false);
+        return view;
     }
 
     @Override
