@@ -16,12 +16,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import vn.phamngochanh.premierleague.R;
-import vn.phamngochanh.premierleague.View.Fragment.Fixtures.FragmentFixtures;
-import vn.phamngochanh.premierleague.View.Fragment.Home.FragmentHome;
-import vn.phamngochanh.premierleague.View.Fragment.Player.FragmentPlayer;
-import vn.phamngochanh.premierleague.View.Fragment.Stadium.FragmentStadium;
-import vn.phamngochanh.premierleague.View.Fragment.Table.FragmentTable;
-import vn.phamngochanh.premierleague.View.Fragment.Team.FragmentTeam;
+import vn.phamngochanh.premierleague.View.Home.Fragment.FixturesFragment;
+import vn.phamngochanh.premierleague.View.Home.Fragment.HomeFragment;
+import vn.phamngochanh.premierleague.View.Home.Fragment.PlayerFragment;
+import vn.phamngochanh.premierleague.View.Home.Fragment.StandingFragment;
+import vn.phamngochanh.premierleague.View.Home.Fragment.TeamFragment;
+
 
 /**
  * Created by PhamNgocHanh on 1/8/17.
@@ -54,6 +54,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawerToggle = new ActionBarDrawerToggle(HomeActivity.this, drawerLayout, R.string.open, R.string.close);
         drawerToggle.syncState();
         navMenu.setNavigationItemSelectedListener(this);
+
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        HomeFragment homeFragment = new HomeFragment();
+        transaction.replace(R.id.content, homeFragment);
+        transaction.commit();
     }
 
     @Override
@@ -76,32 +82,30 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         FragmentTransaction transaction = manager.beginTransaction();
         switch (item.getItemId()){
             case R.id.Home:
-                FragmentHome fragmentHome = new FragmentHome();
-                transaction.replace(R.id.content, fragmentHome);
-                break;
-            case R.id.Fixtures:
-                FragmentFixtures fragmentFixtures = new FragmentFixtures();
-                transaction.replace(R.id.content, fragmentFixtures);
-                break;
-            case R.id.Player:
-                FragmentPlayer fragmentPlayer = new FragmentPlayer();
-                transaction.replace(R.id.content, fragmentPlayer);
-                break;
-            case R.id.Stadium:
-                FragmentStadium fragmentStadium = new FragmentStadium();
-                transaction.replace(R.id.content, fragmentStadium);
+                HomeFragment homeFragment = new HomeFragment();
+                transaction.replace(R.id.content, homeFragment);
                 break;
             case R.id.Table:
-                FragmentTable fragmentTable = new FragmentTable();
-                transaction.replace(R.id.content, fragmentTable);
+                StandingFragment standingFragment = new StandingFragment();
+                transaction.replace(R.id.content, standingFragment);
                 break;
             case R.id.Team:
-                FragmentTeam fragmentTeam = new FragmentTeam();
-                transaction.replace(R.id.content, fragmentTeam);
+                TeamFragment teamFragment = new TeamFragment();
+                transaction.replace(R.id.content, teamFragment);
                 break;
+            case R.id.Fixtures:
+                FixturesFragment fixturesFragment = new FixturesFragment();
+                transaction.replace(R.id.content, fixturesFragment);
+                break;
+            case R.id.Player:
+                PlayerFragment playerFragment = new PlayerFragment();
+                transaction.replace(R.id.content, playerFragment);
+                break;
+
         }
         transaction.commit();
         drawerLayout.closeDrawer(GravityCompat.START);
         return false;
     }
+
 }

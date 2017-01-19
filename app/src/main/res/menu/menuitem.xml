@@ -16,10 +16,6 @@
         android:id="@+id/Team"
         android:title="@string/menu_team"/>
     <item
-        android:id="@+id/Stadium"
-        android:title="@string/menu_stadium"
-        />
-    <item
         android:id="@+id/Player"
         android:title="@string/menu_player"
         />
